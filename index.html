@@ -10,53 +10,84 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header class="frame">
-      <a class="logo" href="#">Atelier Loop</a>
-      <button class="menu">Menu</button>
-      <nav>
+    <div class="bg-layer"></div>
+    <header class="site-header container">
+      <a class="brand" href="#top">Atelier Loop</a>
+      <button class="menu-toggle" aria-expanded="false" aria-label="メニュー">☰</button>
+      <nav class="nav-links">
         <a href="#items">Items</a>
-        <a href="#about">About</a>
+        <a href="#craft">Craft</a>
+        <a href="#voices">Voices</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
 
-    <main class="frame">
-      <section class="hero">
-        <p class="tiny">HANDMADE FOR DAILY LIFE</p>
-        <h1>毎日使いたくなる、手仕事の道具。</h1>
-        <p>陶器、布小物、木工雑貨。作り手の背景が見えるセレクトを届けます。</p>
+    <main id="top" class="container">
+      <section class="hero reveal">
+        <span class="badge">HANDMADE FOR DAILY LIFE</span>
+        <div class="hero-grid">
+          <div>
+            <h1>毎日使いたくなる、手仕事の道具。</h1>
+            <p class="lead">陶器、布小物、木工雑貨。作り手の背景まで伝えることで、選ぶ時間も楽しめるEC体験を提供します。</p>
+            <div class="hero-actions">
+              <a class="btn primary" href="#items">商品を見る</a>
+              <a class="btn ghost" href="#contact">入荷相談</a>
+            </div>
+          </div>
+          <aside class="hero-stats">
+            <article><strong data-count="57" data-suffix="工房">0工房</strong><span>提携クラフト工房</span></article>
+            <article><strong data-count="420" data-suffix="点">0点</strong><span>取り扱い商品</span></article>
+            <article><strong data-count="89" data-suffix="%">0%</strong><span>リピート購入率</span></article>
+          </aside>
+        </div>
       </section>
 
-      <section class="items" id="items">
-        <article>
-          <h2>Stone Mug</h2>
-          <p>質感を楽しむグレイマグ。</p>
-          <strong>¥3,400</strong>
-        </article>
-        <article>
-          <h2>Linen Tote</h2>
-          <p>軽さと耐久性を両立したトート。</p>
-          <strong>¥4,100</strong>
-        </article>
-        <article>
-          <h2>Oak Board</h2>
-          <p>食卓にも使える無垢材ボード。</p>
-          <strong>¥2,900</strong>
-        </article>
+      <section class="section reveal" id="items">
+        <div class="section-head"><span class="eyebrow">FEATURED ITEMS</span><h2>人気アイテム</h2></div>
+        <div class="card-grid three">
+          <article class="card"><h3>Stone Mug</h3><p>釉薬の表情が一点ずつ異なるマグカップ。</p><strong>¥3,400</strong></article>
+          <article class="card"><h3>Linen Tote</h3><p>日常使いしやすい軽量リネントート。</p><strong>¥4,100</strong></article>
+          <article class="card"><h3>Oak Board</h3><p>食卓にも映える無垢材のサービングボード。</p><strong>¥2,900</strong></article>
+        </div>
       </section>
 
-      <section class="about" id="about">
-        <h2>About Us</h2>
-        <p>全国の小さな工房と協力し、少量生産のアイテムを適正価格で販売しています。</p>
+      <section class="section reveal" id="craft">
+        <div class="section-head"><span class="eyebrow">CRAFT STORY</span><h2>ものづくりの背景</h2></div>
+        <div class="process-list">
+          <article><h3>素材選定</h3><p>産地と品質基準を明示し、安心して選べる情報を提供。</p></article>
+          <article><h3>小ロット生産</h3><p>過剰在庫を持たず、作り手への還元を重視した販売設計。</p></article>
+          <article><h3>長期利用</h3><p>修理相談やケア情報を同梱し、長く使える体験をサポート。</p></article>
+        </div>
       </section>
 
-      <section class="contact" id="contact">
-        <h2>お問い合わせ</h2>
-        <a href="mailto:support@atelier-loop.jp">support@atelier-loop.jp</a>
+      <section class="section reveal" id="voices">
+        <div class="section-head"><span class="eyebrow">CUSTOMER VOICES</span><h2>購入者レビュー</h2></div>
+        <div class="review-grid">
+          <blockquote>「作家情報が詳しく、買う理由が明確になります。」</blockquote>
+          <blockquote>「写真と実物の印象差が少なく、満足度が高いです。」</blockquote>
+          <blockquote>「梱包が丁寧でギフトにも使いやすいです。」</blockquote>
+        </div>
+      </section>
+
+      <section class="section reveal" id="contact">
+        <div class="contact-panel">
+          <div>
+            <span class="eyebrow">CONTACT</span>
+            <h2>在庫・入荷のお問い合わせ</h2>
+            <p>商品名と用途を送信ください。次回入荷予定とおすすめ商品を案内します。</p>
+          </div>
+          <form class="contact-form">
+            <input type="text" placeholder="お名前" required />
+            <input type="email" placeholder="メールアドレス" required />
+            <textarea placeholder="気になる商品・用途"></textarea>
+            <button type="submit" class="btn primary">送信する</button>
+          </form>
+        </div>
       </section>
     </main>
 
-    <footer class="frame">© <span id="year"></span> Atelier Loop</footer>
+    <footer class="container">© <span id="year"></span> Atelier Loop</footer>
+    <div class="toast" id="toast">お問い合わせありがとうございます。入荷情報を返信します。</div>
     <script src="app.js"></script>
   </body>
 </html>
